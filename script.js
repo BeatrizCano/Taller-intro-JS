@@ -54,38 +54,38 @@ document.write(" " + sister);
 //funciones 
     //ejercicio_1
 
-function saludo(firstName, mensaje) {
-    firstName = 'Pedro';
-    mensaje = `Hola, ${firstName} `;
+function saludo(firstName) {
+    let mensaje = `Hola, ${firstName} `;
     return mensaje 
 }
 
-console.log(saludo());
-document.write(" " + saludo());
+console.log(saludo("Pedro"));
+document.write(" " + saludo("Pedro"));
 
 //ejercicio_2
 
  function sumaFunction(x,y) {
-    x = 9;
-    y = 5;
     return x + y
  }
 
- console.log(sumaFunction());
- document.write(" " + sumaFunction());
+ console.log(sumaFunction(9, 5));
+ document.write(" " + sumaFunction(9, 5));
 
  //ejercicio_3
 
  function parImpar(n) {
-    n= 35;
-   if(n % 2 == 0) {
-    console.log(n + " " + " es par")
-   } else {
-    console.log(n + " " + "es impar")
-   }
- }
+    if(n % 2 == 0) {
+     let resultP = `el número ${n} es par`;
+     return(resultP);
  
- document.write(" " + parImpar());
+    } else {
+     let resultI = `el número ${n} es impar`;
+     return(resultI);
+    }
+  }
+ 
+ console.log(parImpar(35));
+ document.write(" " + parImpar(35));
 
  //objetos
     //ejercicio_1
@@ -103,25 +103,31 @@ document.write(" " + saludo());
     //ejercicio_2
 
     function makeCar() {
-        console.log(myNewCar.make)
+        let resultMakeCar = myNewCar.make;
+        return(resultMakeCar);
     }
 
+    console.log(makeCar());
     document.write(" " + makeCar());
 
     //ejercicio_3
 
     function doorsCar() {
-        console.log(myNewCar.doors)
+        let resultDoorsCar = myNewCar.doors;
+        return(resultDoorsCar);
     }
 
+    console.log(doorsCar());
     document.write(" " + doorsCar());
 
     //ejercicio_3
 
     function engineCar() {
-        console.log(myNewCar.engine.size)
+        let resultEngineCar = myNewCar.engine.size;
+        return(resultEngineCar);
     }
 
+    console.log(engineCar());
     document.write(" " + engineCar());
 
     //arrays
@@ -172,17 +178,21 @@ document.write(" " + saludo());
     //ejercicio_7
 
     function lowerLetter() {
-        console.log('¡HOLA Miriam!'.toLowerCase());
+        let hello = '¡HOLA Miriam!'.toLowerCase();
+        return(hello);
     }
     
+    console.log(lowerLetter());
     document.write(" " + lowerLetter());
 
     //ejercicio_8
 
     function capitalLetter() {
-        console.log('¡Adios Miriam!'.toUpperCase());
+        let bye = '¡Adios Miriam!'.toUpperCase();
+        return(bye);
     }
-    
+
+    console.log(capitalLetter());
     document.write(" " + capitalLetter());
 
     //ejercicio_9 
@@ -202,13 +212,14 @@ document.write(" " + saludo());
         //ejercicio_1
 
     function logInMessage() {
-        console.log("Está usted en la página de registro")
+        console.log("Está usted en la página de registro");
     }
 
     let activeButton = document.getElementById("buttonlogIn");
     console.log(activeButton);
 
     activeButton.onclick = addEventListener("click", logInMessage);
+    //falta imprimir en pantalla el mensaje (solo sale en consola) 
 
     //ejercicio_2
 
@@ -216,15 +227,16 @@ document.write(" " + saludo());
     title.textContent = "Práctica de Java Script";
 
     console.log(title);
-
+    
     //ejercicio_3
-   
+        //oculta el html 
     function noShowElement() {
         document.getElementById('ocultTitle').style.display = 'none';
     }
 
     console.log(noShowElement());
 
+        //muestra el html
     function ShowElement() {
         document.getElementById('ocultTitle').style.display = 'block';
     }
@@ -238,6 +250,7 @@ document.write(" " + saludo());
     //ejercicio_5
 
     console.log(tenNames);
+    document.write(" " + tenNames);
 
     //ejercicio_6
 
